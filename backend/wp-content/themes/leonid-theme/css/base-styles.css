@@ -1,0 +1,352 @@
+/*h1*/
+
+/*h2*/
+
+/*h3*/
+
+/*Big text*/
+
+/*text*/
+
+/*list text*/
+
+/*CAPTION*/
+
+/*CAPTION-SMALL*/
+
+/*links*/
+
+/*btn-title*/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img,
+abbr {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+legend {
+  color: #000;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* __reset__ */
+
+/* __base__ */
+
+.wrapper {
+  max-width: 1720px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #E5381E;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/OpenSans/OpenSans-Bold.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans/OpenSans-Bold.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans/OpenSans-Regular.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Regular.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+body {
+  font-family: Montserrat-Regular;
+  color: #181818;
+  background: #E5E5E5;
+}
+
+a,
+button {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
+a:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  font-family: Montserrat-Regular;
+  font-size: 12px;
+  line-height: 15px;
+  color: #181818;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+a:hover {
+  color: #E5381E;
+}
+
+input {
+  cursor: text;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* __base__ */
+
+textarea {
+  resize: none;
+  min-height: 165px;
+}
+
+input,
+textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #767676;
+  padding: 23px 79px 23px 25px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+}
+
+.page-btn {
+  width: 100%;
+  background: transparent;
+  margin-bottom: 8px;
+}
+
+.confident {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.confident a {
+  color: #E5381E;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .wrapper {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  textarea {
+    min-height: 225px;
+  }
+}
+
+.checkbox-pivacy{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.checkbox-pivacy input[type="checkbox"]{
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: auto;
+  font-size: 16px;
+}
+.checkbox-pivacy .page-link{
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.checkbox-pivacy .wpcf7-not-valid-tip{
+  padding-left: 23px;
+}
+

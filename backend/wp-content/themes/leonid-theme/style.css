@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/*
+Theme Name: leonid krutakov 
+Theme URI: https://krutakov.ru/themes/krutakov/
+Author: @gromov_ilia https://t.me/gromov_ilia
+Author URI: https://krutakov.ru
+Description: Site leonid krutakov
+Version: 1.0
+*/
+
+.checkbox-pivacy{
+  display: flex;
+}
+
+.checkbox-pivacy input[type="checkbox"]{
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: auto;
+  font-size: 16px;
+}
+.checkbox-pivacy .page-link{
+  font-size: 16px;
+  padding-left: 5px;
+}

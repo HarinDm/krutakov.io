@@ -1,0 +1,8 @@
+/wp-content/upgrade/
+/wp-content/ai1wm-backups/
+/wp-content/languages/
+/wp-content/plugins/
+/wp-content/uploads/
+/wp-content/themes/*
+!wp-content/themes/leonid-theme/
+
