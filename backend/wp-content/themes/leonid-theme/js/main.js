@@ -17,3 +17,13 @@ if(buttoncopyToClipboard){
   })
 }
 
+console.log(1);
+var swiper = new Swiper("#sliderBannerBookmarks", {
+  slidesPerView: 5,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
