@@ -1773,7 +1773,7 @@
   }
 
   .banner-main {
-    padding: 45px 0 4%;
+    padding: 45px 0 10%;
   }
 
   .banner-main__img {
@@ -2161,28 +2161,59 @@
 .slider-banner__btn{
   width: 100%;
     height: 100px;
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: flex-end;
+    margin-top: 50px;
 }
 
 .slider-banner__btn .swiper-button-prev{
-  background: red;
+  border: 3px solid #767676;
   position: relative;
   margin-right: 20px;
   
 }
 
 .slider-banner__btn .swiper-button-next{
-  background: red;
+  border: 3px solid #767676;
   position: relative;
   margin-left: 20px;
 }
 
-.article-card__text .swiper-slide {
+.slider-banner__btn
+.swiper-button-prev::after, 
+.swiper-button-next::after{
+  color: #767676;
+  font-size: 24px;
+}
+
+.slider-banner-swiper
+.article-card {
+  width: 220px;
+}
+
+.slider-banner-swiper
+.swiper-slide 
+.article-card__text {
   font-size: 16px;
   line-height: 140%;
-  width: 220px;
-  height: 153px;
   display: block;
+}
+
+.slider-banner-swiper
+.swiper-wrapper {
+  height: 153px;
+}
+
+.read-more {
+  position: absolute;
+  bottom: 0;
+}
+
+.slider-banner
+.page-btn{
+  width: 268px;
+  height: 66px;
+  margin-top: -70px;
+  position: absolute;
 }

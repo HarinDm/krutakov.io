@@ -67,7 +67,9 @@
                 </div>
               </div>
             </div>
-            <a class="article-card__text" href="<?php the_permalink() ?>"><?php the_title() ?></a>
+            <a class="article-card__text" href="<?php the_permalink() ?>"><?php the_title() ?>
+            <div class="read-more">Читать далее</div>
+            </a>
           </article>
           <?php endforeach; 
           wp_reset_postdata();
