@@ -40,52 +40,77 @@
         </div>
       </div>
       <div class="actual-note">
-        <div class="actual">Актуальное</div>
-        <div class="note">Заметки</div>
-        <div class="actual">Актуальное</div>
-        <div class="note">Заметки</div>
-        <div class="actual">Актуальное</div>
-        <div class="note">Заметки</div>
+        <div class="ticker">
+          <div class="ticker__list">
+            <div class="ticker__item">
+              <div class="actual">Актуальное</div>
+            </div>
+            <div class="ticker__item">
+              <div class="note">Заметки</div>
+            </div>
+            <div class="ticker__item">
+              <div class="actual">Актуальное</div>
+            </div>
+            <div class="ticker__item">
+              <div class="note">Заметки</div>
+            </div>
+            <div class="ticker__item">
+              <div class="actual">Актуальное</div>
+            </div>
+            <div class="ticker__item">
+              <div class="note">Заметки</div>
+            </div>
+            <div class="ticker__item">
+              <div class="actual">Актуальное</div>
+            </div>
+            <div class="ticker__item">
+              <div class="note">Заметки</div>
+            </div>
+            <div class="ticker__item">
+              <div class="actual">Актуальное</div>
+            </div>
+            <div class="ticker__item">
+              <div class="note">Заметки</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="slider-banner">
                 <!-- Slider main container -->
         <div id="sliderBannerBookmarks" class="slider-banner-swiper swiper mySwiper">
           <div class="swiper-wrapper">
-          <?php foreach($articles as $post): 
-                 setup_postdata($post); 
-            ?>
-          <article class="article-card swiper-slide">
-            <div class="article-card__info">
-              <div class="date__info">
-                <div class="date__info-date"> <?php echo get_the_date('j F Y'); ?></div>
-                <div class="date__info-category">
-                  <?php
-                  $cats = wp_get_post_categories( $post->ID, [ 'fields' => 'all' ] );
-                  echo $catName = $cats[0]->name;
-                  ?>
+            <?php foreach($articles as $post): 
+                  setup_postdata($post); 
+              ?>
+            <article class="article-card swiper-slide">
+              <div class="article-card__info">
+                <div class="date__info">
+                  <div class="date__info-date"> <?php echo get_the_date('j F Y'); ?></div>
+                  <div class="date__info-category">
+                    <?php
+                    $cats = wp_get_post_categories( $post->ID, [ 'fields' => 'all' ] );
+                    echo $catName = $cats[0]->name;
+                    ?>
 
+                  </div>
                 </div>
               </div>
-            </div>
-            <a class="article-card__text" href="<?php the_permalink() ?>"><?php the_title() ?>
-            <div class="read-more">Читать далее</div>
-            </a>
-          </article>
-          <?php endforeach; 
-          wp_reset_postdata();
-					?>
-
-            <!-- <div class="swiper-slide">Slide</div> -->
+              <a class="article-card__text" href="<?php the_permalink() ?>"><?php the_title() ?>
+                <div class="read-more">Читать далее</div>
+              </a>
+            </article>
+            <?php endforeach; 
+            wp_reset_postdata();
+            ?>
+              <!-- <div class="swiper-slide">Slide</div> -->
           </div>
           <div class="slider-banner__btn">
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
-         
         </div>
-        <a class="page-btn" href="<?php echo $link['url']; ?>"><?php echo $link['title']?></a>
       </div>
-      
+      <a class="page-btn read-all" href="<?php echo $link['url']; ?>"><?php echo $link['title']?></a>
     </div>
   </section>
 </main>

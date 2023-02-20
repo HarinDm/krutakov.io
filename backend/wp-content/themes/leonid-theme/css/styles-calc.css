@@ -1095,8 +1095,7 @@
   text-transform: uppercase;
 }
 
-.slider__info-date .date__info-date,
-.slider__info-date .date__info-category {
+.slider__info-date .date__info-date{
   color: #ffffff;
 }
 
@@ -2139,8 +2138,7 @@
 .actual::after{
   content: "";
   display: block;
-  background-color: #E5381E
-  ;
+  background-color: #E5381E;
   width: 10px;
   height: 10px;
   border-radius: 100%;
@@ -2150,8 +2148,7 @@
 .note::after{
   content: "";
   display: block;
-  background-color: #E5381E
-  ;
+  background-color: #E5381E;
   width: 10px;
   height: 10px;
   border-radius: 100%;
@@ -2210,10 +2207,57 @@
   bottom: 0;
 }
 
-.slider-banner
-.page-btn{
+.read-all{
   width: 268px;
   height: 66px;
   margin-top: -70px;
   position: absolute;
 }
+           
+                 /* бегущая строка */
+.ticker {
+  display: flex;
+  width: 1920px;
+}
+
+.ticker__list {
+  display: flex;
+  animation: ticker 15s infinite linear;
+}
+
+.ticker:hover .ticker__list {
+  animation-play-state: paused;
+}
+
+@-moz-keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-o-keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+     /* -----------------------------   */
+     
+
+.date__info-category {
+  color: #E5381E;
+}
+
+
+
+
+
