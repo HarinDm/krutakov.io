@@ -2164,29 +2164,36 @@
     margin-top: 50px;
 }
 
-.slider-banner__btn .swiper-button-prev{
-  border: 3px solid #767676;
-  position: relative;
-  margin-right: 20px;
-  
-}
-
+.slider-banner__btn .swiper-button-prev,
 .slider-banner__btn .swiper-button-next{
   border: 3px solid #767676;
   position: relative;
+  background-color: #E5E5E5;
+  
+}
+.slider-banner__btn .swiper-button-prev{
+  margin-right: 20px;
+
+}
+.slider-banner__btn .swiper-button-next{
   margin-left: 20px;
+}
+
+.slider-banner__btn .swiper-button-next:active.swiper-button-next::after,
+.slider-banner__btn .swiper-button-next:active,
+.slider-banner__btn .swiper-button-prev:active.swiper-button-prev::after,
+.slider-banner__btn .swiper-button-prev:active{
+  border-color: #E5381E;
+  color: #E5381E;
+
 }
 
 .slider-banner__btn
 .swiper-button-prev::after, 
+.slider-banner__btn
 .swiper-button-next::after{
   color: #767676;
   font-size: 24px;
-}
-
-.slider-banner-swiper
-.article-card {
-  width: 220px;
 }
 
 .slider-banner-swiper
@@ -2212,17 +2219,20 @@
   height: 66px;
   margin-top: -70px;
   position: absolute;
+  z-index: 2;
 }
            
                  /* бегущая строка */
 .ticker {
   display: flex;
-  width: 1920px;
+  /* maxwidth: 1920px; */
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .ticker__list {
   display: flex;
-  animation: ticker 15s infinite linear;
+  animation: ticker 25s infinite linear;
 }
 
 .ticker:hover .ticker__list {
@@ -2252,7 +2262,6 @@
 }
      /* -----------------------------   */
      
-
 .date__info-category {
   color: #E5381E;
 }
