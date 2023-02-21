@@ -18,6 +18,17 @@ $all = get_posts(array(
   'category_name' => 'articles-cat, video-cat'
 ));
 
+
+$blockACF = get_field('add_logos');
+//  echo '<pre>';
+//  var_dump($blockACF);
+//  echo '</pre>';
+
+  if (!empty($blockACF) ) :
+      // $fieldsACF = $blockACF['field'];
+      // $addLogos = $fieldsACF['logo'];
+
+
 ?>
 
 <main class="page page-articles">
@@ -147,7 +158,20 @@ $all = get_posts(array(
         </div>
 
       </div>
+        <div class="logos-block">
+          <div class="logos">
+            <?php
+            if(!empty($blockACF)) :
+            foreach($blockACF as $item) : 
+            ?>
+              <img class="logo" src="<?php echo $item['logo']; ?>">
+            <?php endforeach; 
+              endif;
+            ?>
+          </div>
+        </div>
     </div>
   </section>
 </main>
+<?php endif; ?>
 <?php get_footer(); ?>

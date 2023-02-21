@@ -2266,6 +2266,26 @@
   color: #E5381E;
 }
 
+.logos-block{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logos{
+  display: flex;
+  height: 300px;
+  margin: 20px 0 200px 0;
+}
+
+.logo{
+  width: 300px;
+  height: 300px;
+  margin: 0 15px 0 15px;
+}
+
+
+
 
 
 
