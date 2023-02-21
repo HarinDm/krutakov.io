@@ -41,6 +41,39 @@
       </div>
       <div class="actual-note">
         <div class="ticker">
+          <?/* for()*/?>
+          <div class="ticker__list">
+            <div class="ticker__item">
+              <div class="actual">Актуальное</div>
+            </div>
+            <div class="ticker__item">
+              <div class="note">Заметки</div>
+            </div>
+            <div class="ticker__item">
+              <div class="actual">Актуальное</div>
+            </div>
+            <div class="ticker__item">
+              <div class="note">Заметки</div>
+            </div>
+            <div class="ticker__item">
+              <div class="actual">Актуальное</div>
+            </div>
+            <div class="ticker__item">
+              <div class="note">Заметки</div>
+            </div>
+            <div class="ticker__item">
+              <div class="actual">Актуальное</div>
+            </div>
+            <div class="ticker__item">
+              <div class="note">Заметки</div>
+            </div>
+            <div class="ticker__item">
+              <div class="actual">Актуальное</div>
+            </div>
+            <div class="ticker__item">
+              <div class="note">Заметки</div>
+            </div>
+          </div>
           <div class="ticker__list">
             <div class="ticker__item">
               <div class="actual">Актуальное</div>
@@ -110,7 +143,8 @@
           </div>
         </div>
       </div>
-      <a class="page-btn read-all" href="<?php echo $link['url']; ?>"><?php echo $link['title']?></a>
+      <a class="page-btn read-all" href="<?php echo $link['url']; ?>"><?php echo $link['title']?>
+      </a>
     </div>
   </section>
 </main>
