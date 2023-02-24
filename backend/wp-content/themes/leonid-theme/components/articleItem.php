@@ -18,7 +18,6 @@
          <a class="date__info-category" href="<?php echo $term_link;?>">
           <?php echo $term->name;?>
          </a>
-          <span>|</span>
          <?php endforeach; ?>
 
       

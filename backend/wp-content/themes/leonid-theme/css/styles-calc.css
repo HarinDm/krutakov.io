@@ -591,15 +591,13 @@
   align-items: center;
 }
 
-.date__info-date::after {
+
+.date__info-category::before {
   content: '';
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: inline-block;
   width: 4px;
   height: 4px;
-  margin: 0 14px;
+  margin: 2px 14px;
   border-radius: 100%;
   background: #E5381E;
 }
