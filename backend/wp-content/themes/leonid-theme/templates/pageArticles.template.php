@@ -125,6 +125,61 @@ $blockACF = get_field('add_logos');
             <div class="tab-link page-link">Статьи</div>
             <div class="tab-link page-link">Видео</div>
           </div>
+          <?php
+          $categories = get_categories( [
+            'taxonomy'     => 'category',
+            'type'         => 'post',
+            // ID родительской категории по которой делаю поиск
+            'parent'       => 44,
+            'orderby'      => 'name',
+            'order'        => 'ASC',
+            'hide_empty'   => 1,
+            'hierarchical' => 1,
+            'exclude'      => '',
+            'include'      => '',
+            'number'       => 0,
+            'pad_counts'   => false,
+            // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
+          ] );
+          // var_dump($categories );
+          // if( $categories ){
+          //   foreach( $categories as $cat ){
+              // Данные в объекте $cat
+          
+              // $cat->term_id
+              // echo $cat->name;
+              // $cat->slug (rubrika-1)
+              // $cat->term_group (0)
+              // $cat->term_taxonomy_id (4)
+              // $cat->taxonomy (category)
+              // $cat->description (Текст описания)
+              // $cat->parent (0)
+              // $cat->count (14)
+              // $cat->object_id (2743)
+              // $cat->cat_ID (4)
+              // $cat->category_count (14)
+              // $cat->category_description (Текст описания)
+              // $cat->cat_name (Рубрика 1)
+              // $cat->category_nicename (rubrika-1)
+              // $cat->category_parent (0)
+          
+          //   }
+          // }
+          ?>
+     
+          
+          <div class="center">
+            <select name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
+            <?php foreach($categories as $cat ):
+              $term_link = get_term_link( $cat );
+              ?>
+            <option value="<?php echo $cat->name;?>" data-href="<?php echo $term_link;?>"><?php echo $cat->name;?></option>
+            <?php endforeach; ?>
+          
+            </select>
+          </div>
+
+          
           <div class="tab-content is-active">
             <div class="articles__items">
               <?php foreach ($all as $post) :

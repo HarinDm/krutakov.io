@@ -34,6 +34,7 @@
   <meta property="twitter:creator" content="Ilia Gromov">*/ ?>
   <!-- <link rel="stylesheet" href="libs/css/swiper/swiper-bundle.min.css"> -->
   <!-- <script src="libs/js/swiper/swiper-bundle.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <?php wp_head(); ?>
 </head>
 

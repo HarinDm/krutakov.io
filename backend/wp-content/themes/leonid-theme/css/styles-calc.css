@@ -2284,6 +2284,124 @@
   margin: 0 15px 0 15px;
 }
 
+  /* --------------------------select ------------------ */
+ 
+  .center {
+    position: absolute;
+    display: contents;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /** Custom Select **/
+.custom-select-wrapper {
+  position: absolute;
+  display: inline-block;
+  user-select: none;
+  margin: -63px 0px 0 675px;
+  border: 1px solid #767676;
+  border-radius: 5px;
+  ;
+}
+.custom-select-wrapper select {
+  display: none;
+}
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+.custom-select-trigger {
+  position: relative;
+  display: block;
+  width: 290px;
+  height: 35px;
+  padding: 0 0px 0 0px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #767676;
+  line-height: 35px;
+  background: #E5E5E5;
+  border-radius: 5px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.custom-select-trigger:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 10px; height: 10px;
+  top: 50%; right: 25px;
+  margin-top: -3px;
+  border-bottom: 1px solid #767676;
+  border-right: 1px solid #767676;
+  transform: rotate(45deg) translateY(-50%);
+  transition: all .4s ease-in-out;
+  transform-origin: 50% 0;
+}
+.custom-select.opened .custom-select-trigger:after {
+  margin-top: 3px;
+  transform: rotate(-135deg) translateY(-50%);
+}
+.custom-options {
+position: absolute;
+display: block;
+top: 100%; left: 0; right: 0;
+min-width: 100%;
+margin: 10px 0;
+border: 1px solid #767676;
+border-radius: 5px;
+box-sizing: border-box;
+box-shadow: 0 2px 1px rgba(0,0,0,.07);
+background: #E5E5E5;
+transition: all .4s ease-in-out;
+padding: 20px 16px 7px 16px;
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+transform: translateY(-15px);
+}
+
+.custom-select.opened .custom-options {
+opacity: 1;
+visibility: visible;
+pointer-events: all;
+transform: translateY(0);
+z-index: 1;
+}
+
+.option-hover:before {
+  background: #f9f9f9;
+}
+.custom-option {
+  position: relative;
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #767676;
+  line-height: 26px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  margin-bottom: 13px;
+
+}
+/* .custom-option:first-of-type {
+  border-radius: 4px 4px 0 0;
+} 
+.custom-option:last-of-type {
+  border-bottom: 0;
+  border-radius: 0 0 4px 4px;
+}*/
+.custom-option:hover,
+.custom-option.selection {
+  color: #E5381E;
+}
+
+
+
+  
+/* --------------------------select ------------------ */
 
 
 
