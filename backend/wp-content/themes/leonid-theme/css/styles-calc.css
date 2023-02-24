@@ -597,7 +597,7 @@
   display: inline-block;
   width: 4px;
   height: 4px;
-  margin: 2px 14px;
+  margin: 2px 10px;
   border-radius: 100%;
   background: #E5381E;
 }
@@ -1653,6 +1653,7 @@
     font-size: 20px;
     line-height: 140%;
   }
+  
 }
 
 @media screen and (min-width: 768px) and (min-width: 1024px) {
@@ -1662,6 +1663,10 @@
 
   .footer__nav .page__nav .page-link {
     margin: 0 20px;
+  }
+
+  .logo:hover {
+    -webkit-filter: grayscale(1);
   }
 }
 
@@ -2280,6 +2285,12 @@
   width: 300px;
   height: 300px;
   margin: 0 15px 0 15px;
+  -webkit-filter: grayscale(1);
+}
+
+.logo:hover{
+  
+  -webkit-filter: none;
 }
 
   /* --------------------------select ------------------ */
