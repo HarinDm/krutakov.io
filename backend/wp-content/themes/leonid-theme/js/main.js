@@ -22,7 +22,7 @@ var sliderBannerBookmarks = document.querySelector('#sliderBannerBookmarks');
  
 if(sliderBannerBookmarks) {
    var SwiperSliderBannerBookmarks = new Swiper(sliderBannerBookmarks, {
-    slidesPerView: 1,
+    slidesPerView: 5,
     spaceBetween: 30,
     loop: true,
     navigation: {
@@ -134,15 +134,25 @@ if(articleCards && articleCards.length !== 0){
 
 const tabLinks = document.querySelectorAll('.tab-link');
 if(tabLinks && tabLinks.length !== 0) {
+
+
+  const plateToggles = document.querySelector('.plate-articles-toggles');
+
+
   tabLinks.forEach((item)=>{
     item.addEventListener('click', (element)=>{
       if(element.target.textContent === 'Заметки'){
+        // сначала нашел  el с помощью document.querySelector
+        // далее отслеживаю клик 
+        // 
+        plateToggles.classList.remove('plate-articles_none');
         //plate-articles class add
         // TODO: plate-articles classList.add 
         console.log('plate-articles Становятся видемыми');
       } else {
           // TODO:  plate-articles classList.remove
-          console.log('блоки не видны')
+          plateToggles.classList.add('plate-articles_none');
+          console.log('блоки не видны');
       }
     });
   });

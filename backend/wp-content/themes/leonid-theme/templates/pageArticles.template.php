@@ -118,13 +118,23 @@ $blockACF = get_field('add_logos');
 
             </div>
           </div>
+          <div class="articles-select">
+            <select name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
+            <?php foreach($categories as $cat ):
+              $term_link = get_term_link( $cat );
+              ?>
+            <option value="<?php echo $cat->name;?>" data-href="<?php echo $term_link;?>"><?php echo $cat->name;?></option>
+            <?php endforeach; ?>
+            </select>
+          </div>
         </div>
         <div class="articles__content" id="tabs">
           <div class="tabs-nav">
             <div class="tab-link page-link is-active">все</div>
-            <div class="tab-link page-link">Видео</div>
-            <div class="tab-link page-link isBookmarks" >Заметки</div>
-            <div class="plate-articles">
+            <div class="tab-link page-link ">Видео</div>
+            <div class="tab-link page-link">Заметки</div>
+            
+            <div class="plate-articles plate-articles-toggles plate-articles_none">
               <button class="plate__left isActive" onclick="onCardShortWidth()">
               <button class="plate__right" onclick="onCardFullWidth()">
             </div>
@@ -170,7 +180,6 @@ $blockACF = get_field('add_logos');
           // }
           ?>
      
-          
           <div class="articles-select">
             <select name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
             <?php foreach($categories as $cat ):
@@ -178,10 +187,10 @@ $blockACF = get_field('add_logos');
               ?>
             <option value="<?php echo $cat->name;?>" data-href="<?php echo $term_link;?>"><?php echo $cat->name;?></option>
             <?php endforeach; ?>
-          
             </select>
           </div>
-          </div>
+
+        </div>
           
 
           
@@ -198,8 +207,7 @@ $blockACF = get_field('add_logos');
           </div>
           <div class="tab-content">
             <div class="articles__items">
-
-              <?php foreach ($articlesCat as $post) :
+              <?php foreach ($videoCat as $post) :
                 setup_postdata($post); ?>
                 <?php include(TEMPLATEPATH . '/components/articleItem.php'); ?>
               <?php endforeach;
@@ -208,13 +216,15 @@ $blockACF = get_field('add_logos');
           </div>
           <div class="tab-content">
             <div class="articles__items">
-              <?php foreach ($videoCat as $post) :
+
+              <?php foreach ($articlesCat as $post) :
                 setup_postdata($post); ?>
                 <?php include(TEMPLATEPATH . '/components/articleItem.php'); ?>
               <?php endforeach;
               wp_reset_postdata(); ?>
             </div>
           </div>
+        
         </div>
 
       </div>
