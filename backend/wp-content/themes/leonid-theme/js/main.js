@@ -95,3 +95,69 @@ $(".custom-option").on("click", function() {
   $(this).parents(".custom-select").removeClass("opened");
   $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
 });
+
+
+const articleCards = document.querySelectorAll('.article-card');
+if(articleCards && articleCards.length !== 0){
+  const plateLeftShort = document.querySelector('.plate-articles .plate__left');
+  const plateRightFull = document.querySelector('.plate-articles .plate__right');
+  // card.classList.add('.article-card_short');
+  // сделать значение по-дефолту
+  // 2 способа 
+  // 1 - пишешь html разметку с классами для первого случая например 1 состояние это короткие карточки
+  // 2 - после загрузки страницы добавbть этот класc через js. 
+  function onCardShortWidth(e) {
+    console.log(e);
+    plateLeftShort.classList.add('isActive');
+    plateRightFull.classList.remove('isActive');
+    articleCards.forEach(function(card){
+      card.classList.add('article-card_short');
+      // card.classList.toggle('article-card_short');
+      card.classList.remove('article-card_full');
+      // card.classList.toggle('.article-card_full');
+    });
+    
+    // document.getElementById('foo').style.cssText = 'width: 100%;'
+    // document.getElementById('foo').style.cssText = 'width: 100%;'
+  }
+  
+  function onCardFullWidth() {
+    plateLeftShort.classList.remove('isActive');
+    plateRightFull.classList.add('isActive');
+    articleCards.forEach(function(card){
+      card.classList.remove('article-card_short');
+      card.classList.add('article-card_full');
+    });
+  }
+}
+
+
+const tabLinks = document.querySelectorAll('.tab-link');
+if(tabLinks && tabLinks.length !== 0) {
+  tabLinks.forEach((item)=>{
+    item.addEventListener('click', (element)=>{
+      if(element.target.textContent === 'Заметки'){
+        //plate-articles class add
+        // TODO: plate-articles classList.add 
+        console.log('plate-articles Становятся видемыми');
+      } else {
+          // TODO:  plate-articles classList.remove
+          console.log('блоки не видны')
+      }
+    });
+  });
+}
+
+// const isBookmarks = document.querySelector('.isBookmarks');
+// isBookmarks.addEventListener('click', function(e){
+//   if(isBookmarks.classList.contains('is-active')){
+//     //plate-articles class add
+//     console.log('plate-articles Становятся видемыми');
+//   } else {
+//       //plate-articles classList.remove
+//       console.log('блоки не видны')
+//   }
+// });
+
+
+

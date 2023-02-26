@@ -1,4 +1,4 @@
-<article class="article-card swiper-slide">
+<article class="article-card swiper-slide article-card_short" >
   <div class="article-card__info">
     <div class="date__info">
       <div class="date__info-date"> <?php echo get_the_date('j F Y'); ?></div>
@@ -12,7 +12,7 @@
         //  var_dump($cats);
         //  echo '</pre>';
         //  echo $catName = $cats[0]->name;
-         foreach($terms as $term):
+         foreach($terms as $term):  
           $term_link = get_term_link( $term );
          ?>
          <a class="date__info-category" href="<?php echo $term_link;?>">

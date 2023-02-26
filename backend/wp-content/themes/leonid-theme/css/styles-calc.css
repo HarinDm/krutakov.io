@@ -568,7 +568,7 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  /* display: flex; */
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -2293,24 +2293,22 @@
   -webkit-filter: none;
 }
 
-  /* --------------------------select ------------------ */
+  /* --------------------------select ------------------ **/
  
-  .center {
-    position: absolute;
-    display: contents;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  /** Custom Select **/
+  .articles-select {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+    margin-right: 40px;
+}
+
 .custom-select-wrapper {
-  position: absolute;
-  display: inline-block;
+  height: 35px;
+  width: 300px;
   user-select: none;
-  margin: -63px 0px 0 675px;
   border: 1px solid #767676;
   border-radius: 5px;
-  ;
 }
 .custom-select-wrapper select {
   display: none;
@@ -2318,13 +2316,12 @@
 .custom-select {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
 .custom-select-trigger {
   position: relative;
   display: block;
-  width: 290px;
-  height: 35px;
-  padding: 0 0px 0 0px;
+  width: 100%;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 300;
@@ -2405,15 +2402,44 @@ z-index: 1;
 .custom-option:hover,
 .custom-option.selection {
   color: #E5381E;
-}
-
-
-
-  
+}  
 /* --------------------------select ------------------ */
 
+.plate-articles{
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 34px;
+  margin: -9px 30px 0;
+}
 
+.plate__right,
+.plate__left{
+  width: 34px;
+  height: 34px;
+  border: 0px;
+  margin-left: 15px;
+  -webkit-filter: grayscale(1);
+}
 
+.plate__left{
+  background-image: url(../assets/images/png/plate-left.png);
+}
 
+.plate__right{
+  background-image: url(../assets/images/png/plate-right.png);
+}
 
+.plate-articles 
+.isActive{
+  -webkit-filter: none;
+}
 
+.article-card_full{
+  width: calc(100% - 20px);
+}
+
+.article-card_full
+.article-card__tags{
+  margin-top: 60px;
+}

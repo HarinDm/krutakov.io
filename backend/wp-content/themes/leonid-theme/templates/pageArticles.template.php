@@ -122,10 +122,13 @@ $blockACF = get_field('add_logos');
         <div class="articles__content" id="tabs">
           <div class="tabs-nav">
             <div class="tab-link page-link is-active">все</div>
-            <div class="tab-link page-link">Статьи</div>
             <div class="tab-link page-link">Видео</div>
-          </div>
-          <?php
+            <div class="tab-link page-link isBookmarks" >Заметки</div>
+            <div class="plate-articles">
+              <button class="plate__left isActive" onclick="onCardShortWidth()">
+              <button class="plate__right" onclick="onCardFullWidth()">
+            </div>
+            <?php
           $categories = get_categories( [
             'taxonomy'     => 'category',
             'type'         => 'post',
@@ -168,7 +171,7 @@ $blockACF = get_field('add_logos');
           ?>
      
           
-          <div class="center">
+          <div class="articles-select">
             <select name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
             <?php foreach($categories as $cat ):
               $term_link = get_term_link( $cat );
@@ -178,6 +181,8 @@ $blockACF = get_field('add_logos');
           
             </select>
           </div>
+          </div>
+          
 
           
           <div class="tab-content is-active">
