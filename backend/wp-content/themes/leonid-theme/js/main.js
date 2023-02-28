@@ -22,7 +22,7 @@ var sliderBannerBookmarks = document.querySelector('#sliderBannerBookmarks');
  
 if(sliderBannerBookmarks) {
    var SwiperSliderBannerBookmarks = new Swiper(sliderBannerBookmarks, {
-    slidesPerView: 5,
+    slidesPerView: 7,
     spaceBetween: 30,
     loop: true,
     navigation: {
@@ -39,17 +39,57 @@ if(sliderBannerBookmarks) {
         spaceBetween: 20
       },
       1600:{
-        slidesPerView: 5,
+        slidesPerView: 3,
         spaceBetween: 40
       },
       1920:{
         slidesPerView: 7,
+        spaceBetween: 10
+      },
+
+    }
+  });
+}
+
+
+
+
+
+var sliderArticlesLogo = document.querySelector('#sliderArticlesLogo');
+ 
+if(sliderArticlesLogo) {
+   var SwiperSliderArticlesLogo = new Swiper(SwiperSliderArticlesLogo, {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl:'.swiper-button-next',
+      prevEl:'.swiper-button-prev',
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoint: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      1600:{
+        slidesPerView: 3,
+        spaceBetween: 40
+      },
+      1920:{
+        slidesPerView: 3,
         spaceBetween: 40
       },
 
     }
   });
 }
+
+
+
 
 
 
@@ -137,21 +177,23 @@ if(tabLinks && tabLinks.length !== 0) {
 
 
   const plateToggles = document.querySelector('.plate-articles-toggles');
+  const articlesToggles = document.querySelector('.articles-select');
 
 
   tabLinks.forEach((item)=>{
     item.addEventListener('click', (element)=>{
       if(element.target.textContent === 'Заметки'){
-        // сначала нашел  el с помощью document.querySelector
-        // далее отслеживаю клик 
-        // 
         plateToggles.classList.remove('plate-articles_none');
-        //plate-articles class add
-        // TODO: plate-articles classList.add 
-        console.log('plate-articles Становятся видемыми');
+        console.log('plate-articles Становятся видимыми');
       } else {
-          // TODO:  plate-articles classList.remove
           plateToggles.classList.add('plate-articles_none');
+          console.log('блоки не видны');
+      };
+      if(element.target.textContent === 'я в СМИ'){
+        articlesToggles.classList.remove('articles-select_none');
+        console.log('articles-select Становятся видимыми');
+      } else {
+        articlesToggles.classList.add('articles-select_none');
           console.log('блоки не видны');
       }
     });

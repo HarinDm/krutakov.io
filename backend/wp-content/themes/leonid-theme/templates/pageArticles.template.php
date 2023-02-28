@@ -118,7 +118,7 @@ $blockACF = get_field('add_logos');
 
             </div>
           </div>
-          <div class="articles-select">
+          <div class="articles-select__date">
             <select name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
             <?php foreach($categories as $cat ):
               $term_link = get_term_link( $cat );
@@ -130,7 +130,7 @@ $blockACF = get_field('add_logos');
         </div>
         <div class="articles__content" id="tabs">
           <div class="tabs-nav">
-            <div class="tab-link page-link is-active">все</div>
+            <div class="tab-link page-link is-active">я в СМИ</div>
             <div class="tab-link page-link ">Видео</div>
             <div class="tab-link page-link">Заметки</div>
             
@@ -224,22 +224,30 @@ $blockACF = get_field('add_logos');
               wp_reset_postdata(); ?>
             </div>
           </div>
-        
         </div>
-
       </div>
-        <div class="logos-block">
-          <div class="logos">
-            <?php
-            if(!empty($blockACF)) :
-            foreach($blockACF as $item) : 
-            ?>
-              <img class="logo" src="<?php echo $item['logo']; ?>">
-            <?php endforeach; 
-              endif;
-            ?>
+
+      
+      <div class="logos-block">
+        <div id="sliderArticlesLogo" class="slider">
+          <div class="swiper-wrapper">
+            <div class="logos">
+              <?php
+                if(!empty($blockACF)) :
+                foreach($blockACF as $item) : 
+              ?>
+                <img class="logo" src="<?php echo $item['logo']; ?>">
+              <?php endforeach; 
+                endif;
+              ?>
+            </div>
+          </div>
+          <div class="slider-banner__btn">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
+      </div>
     </div>
   </section>
 </main>

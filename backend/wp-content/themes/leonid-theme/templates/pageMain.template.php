@@ -39,6 +39,9 @@
           </blockquote><a class="page-btn" href="/about/">Об авторе</a>
         </div>
       </div>
+    </div>
+
+    <div class="wrapper-ticker">
       <div class="actual-note">
         <div class="ticker">
           <?/* for()*/?>
@@ -108,6 +111,9 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="wrapper">
       <div class="slider-banner">
                 <!-- Slider main container -->
         <div id="sliderBannerBookmarks" class="slider-banner-swiper swiper mySwiper">
