@@ -37,6 +37,67 @@ $blockACF = get_field('add_logos');
       <h1 class="page__title-h1">
         <span class="page_red">Статьи </span>и видео
       </h1>
+      <div class="tabs-nav__1024px">
+            <div class="tab-link page-link is-active">я в СМИ</div>
+            <div class="tab-link page-link ">Видео</div>
+            <div class="tab-link page-link">Заметки</div>
+            
+            <div class="plate-articles plate-articles-toggles plate-articles_none">
+              <button class="plate__left isActive" onclick="onCardShortWidth()">
+              <button class="plate__right" onclick="onCardFullWidth()">
+            </div>
+            <?php
+            $categories = get_categories( [
+              'taxonomy'     => 'category',
+              'type'         => 'post',
+              // ID родительской категории по которой делаю поиск
+              'parent'       => 44,
+              'orderby'      => 'name',
+              'order'        => 'ASC',
+              'hide_empty'   => 1,
+              'hierarchical' => 1,
+              'exclude'      => '',
+              'include'      => '',
+              'number'       => 0,
+              'pad_counts'   => false,
+              // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
+            ] );
+            // var_dump($categories );
+            // if( $categories ){
+            //   foreach( $categories as $cat ){
+                // Данные в объекте $cat
+            
+                // $cat->term_id
+                // echo $cat->name;
+                // $cat->slug (rubrika-1)
+                // $cat->term_group (0)
+                // $cat->term_taxonomy_id (4)
+                // $cat->taxonomy (category)
+                // $cat->description (Текст описания)
+                // $cat->parent (0)
+                // $cat->count (14)
+                // $cat->object_id (2743)
+                // $cat->cat_ID (4)
+                // $cat->category_count (14)
+                // $cat->category_description (Текст описания)
+                // $cat->cat_name (Рубрика 1)
+                // $cat->category_nicename (rubrika-1)
+                // $cat->category_parent (0)
+            
+            //   }
+            // }
+            ?>
+      
+            <div class="articles-select">
+              <select name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
+              <?php foreach($categories as $cat ):
+                $term_link = get_term_link( $cat );
+                ?>
+              <option value="<?php echo $cat->name;?>" data-href="<?php echo $term_link;?>"><?php echo $cat->name;?></option>
+              <?php endforeach; ?>
+              </select>
+            </div>
+          </div>
       <div class="articles-inner">
         <div class="articles__sidebar">
           <div class="articles__slider">
@@ -139,58 +200,57 @@ $blockACF = get_field('add_logos');
               <button class="plate__right" onclick="onCardFullWidth()">
             </div>
             <?php
-          $categories = get_categories( [
-            'taxonomy'     => 'category',
-            'type'         => 'post',
-            // ID родительской категории по которой делаю поиск
-            'parent'       => 44,
-            'orderby'      => 'name',
-            'order'        => 'ASC',
-            'hide_empty'   => 1,
-            'hierarchical' => 1,
-            'exclude'      => '',
-            'include'      => '',
-            'number'       => 0,
-            'pad_counts'   => false,
-            // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
-          ] );
-          // var_dump($categories );
-          // if( $categories ){
-          //   foreach( $categories as $cat ){
-              // Данные в объекте $cat
-          
-              // $cat->term_id
-              // echo $cat->name;
-              // $cat->slug (rubrika-1)
-              // $cat->term_group (0)
-              // $cat->term_taxonomy_id (4)
-              // $cat->taxonomy (category)
-              // $cat->description (Текст описания)
-              // $cat->parent (0)
-              // $cat->count (14)
-              // $cat->object_id (2743)
-              // $cat->cat_ID (4)
-              // $cat->category_count (14)
-              // $cat->category_description (Текст описания)
-              // $cat->cat_name (Рубрика 1)
-              // $cat->category_nicename (rubrika-1)
-              // $cat->category_parent (0)
-          
-          //   }
-          // }
-          ?>
-     
-          <div class="articles-select">
-            <select name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
-            <?php foreach($categories as $cat ):
-              $term_link = get_term_link( $cat );
-              ?>
-            <option value="<?php echo $cat->name;?>" data-href="<?php echo $term_link;?>"><?php echo $cat->name;?></option>
-            <?php endforeach; ?>
-            </select>
+            $categories = get_categories( [
+              'taxonomy'     => 'category',
+              'type'         => 'post',
+              // ID родительской категории по которой делаю поиск
+              'parent'       => 44,
+              'orderby'      => 'name',
+              'order'        => 'ASC',
+              'hide_empty'   => 1,
+              'hierarchical' => 1,
+              'exclude'      => '',
+              'include'      => '',
+              'number'       => 0,
+              'pad_counts'   => false,
+              // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
+            ] );
+            // var_dump($categories );
+            // if( $categories ){
+            //   foreach( $categories as $cat ){
+                // Данные в объекте $cat
+            
+                // $cat->term_id
+                // echo $cat->name;
+                // $cat->slug (rubrika-1)
+                // $cat->term_group (0)
+                // $cat->term_taxonomy_id (4)
+                // $cat->taxonomy (category)
+                // $cat->description (Текст описания)
+                // $cat->parent (0)
+                // $cat->count (14)
+                // $cat->object_id (2743)
+                // $cat->cat_ID (4)
+                // $cat->category_count (14)
+                // $cat->category_description (Текст описания)
+                // $cat->cat_name (Рубрика 1)
+                // $cat->category_nicename (rubrika-1)
+                // $cat->category_parent (0)
+            
+            //   }
+            // }
+            ?>
+      
+            <div class="articles-select">
+              <select name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
+              <?php foreach($categories as $cat ):
+                $term_link = get_term_link( $cat );
+                ?>
+              <option value="<?php echo $cat->name;?>" data-href="<?php echo $term_link;?>"><?php echo $cat->name;?></option>
+              <?php endforeach; ?>
+              </select>
+            </div>
           </div>
-
-        </div>
           
 
           
