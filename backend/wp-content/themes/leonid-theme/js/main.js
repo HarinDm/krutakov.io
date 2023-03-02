@@ -200,16 +200,7 @@ if(tabLinks && tabLinks.length !== 0) {
   });
 }
 
-// const isBookmarks = document.querySelector('.isBookmarks');
-// isBookmarks.addEventListener('click', function(e){
-//   if(isBookmarks.classList.contains('is-active')){
-//     //plate-articles class add
-//     console.log('plate-articles Становятся видемыми');
-//   } else {
-//       //plate-articles classList.remove
-//       console.log('блоки не видны')
-//   }
-// });
+
 
 
 

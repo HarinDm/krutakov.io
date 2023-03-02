@@ -1,4 +1,4 @@
-<article class="article-card swiper-slide article-card_short" >
+<article class="article-card_short article-card swiper-slide " >
   <div class="article-card__info">
     <div class="date__info">
       <div class="date__info-date"> <?php echo get_the_date('j F Y'); ?></div>
