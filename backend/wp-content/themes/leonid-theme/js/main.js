@@ -39,16 +39,26 @@ if(sliderBannerBookmarks) {
     breakpoints: {
       // when window width is >= 320px
       320: {
-        // slidesPerView: 2,
+         slidesPerView: 1.5,
         // spaceBetween: 20
       },
-      // when window width is >= 480px
+      // when window width is >= 768px
       768: {
-        slidesPerView: 2,
+         slidesPerView: 3,
+        // spaceBetween: 20
+      },
+      // when window width is >= 1024px
+      1024: {
+         slidesPerView: 4,
+        // spaceBetween: 20
+      },
+      // when window width is >= 1600px
+      1600: {
+        slidesPerView: 5,
         // spaceBetween: 30
       },
-      // when window width is >= 640px
-      1024: {
+      // when window width is >= 1920px
+      1920: {
         slidesPerView: 7,
         // spaceBetween: 40
       }

@@ -149,7 +149,7 @@
           </div>
         </div>
       </div>
-      <a class="page-btn read-all" href="<?php echo $link['url']; ?>"><?php echo $link['title']?>
+      <a class="read-all page-btn" href="<?php echo $link['url']; ?>"><?php echo $link['title']?>
       </a>
     </div>
   </section>
