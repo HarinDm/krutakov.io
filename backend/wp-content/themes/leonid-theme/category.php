@@ -248,14 +248,10 @@ $blockACF = get_field('add_logos');
       </div>
       <div class="logos-block">
         <div class="logos">
-          <?php
-          if(!empty($blockACF)) :
-          foreach($blockACF as $item) : 
-          ?>
-            <img class="logo" src="<?php echo $item['logo']; ?>">
-          <?php endforeach; 
-            endif;
-          ?>
+          <img class="logo" src="https://dev.krutakov.ru/wp-content/uploads/2023/02/frame-211.png">
+          <img class="logo" src="https://dev.krutakov.ru/wp-content/uploads/2023/02/logo.png">
+          <img class="logo" src="https://dev.krutakov.ru/wp-content/uploads/2023/02/frame-196-1.png">
+          <img class="logo" src="https://dev.krutakov.ru/wp-content/uploads/2023/02/frame-195.png">
         </div>
       </div>
     </div>
