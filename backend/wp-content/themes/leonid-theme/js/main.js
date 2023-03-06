@@ -24,7 +24,7 @@ if(sliderBannerBookmarks) {
    var SwiperSliderBannerBookmarks = new Swiper(sliderBannerBookmarks, {
     slidesPerView: 1,
     spaceBetween: 30,
-    loop: true,
+    loop: false,
     navigation: {
       nextEl:'.swiper-button-next',
       prevEl:'.swiper-button-prev',
@@ -33,21 +33,26 @@ if(sliderBannerBookmarks) {
       el: ".swiper-pagination",
       clickable: true,
     },
-    breakpoint: {
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      },
-      1600:{
-        slidesPerView: 3,
-        spaceBetween: 40
-      },
-      1920:{
-        slidesPerView: 7,
-        spaceBetween: 10
-      },
+   
 
-    }
+    // }
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        // slidesPerView: 2,
+        // spaceBetween: 20
+      },
+      // when window width is >= 480px
+      768: {
+        slidesPerView: 2,
+        // spaceBetween: 30
+      },
+      // when window width is >= 640px
+      1024: {
+        slidesPerView: 7,
+        // spaceBetween: 40
+      }
+    },
   });
 }
 

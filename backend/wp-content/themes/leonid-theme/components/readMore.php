@@ -1,6 +1,7 @@
 <section class="read-more">
   <h2 class="page__title-h2">Может быть интересно</h2>
-  <div class="read-more__items slider-inner js--swiper_read-more">
+  <div class="read-more__items slider-inner js--swiper_read-more swiper">
+    
     <div class="swiper-wrapper">
     <?php
        $articles = get_field('_article');
