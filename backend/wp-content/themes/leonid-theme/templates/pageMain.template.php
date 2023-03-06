@@ -135,7 +135,7 @@
                 </div>
               </div>
               <a class="article-card__text" href="<?php the_permalink() ?>"><?php the_title() ?>
-                <div class="read-more">Читать далее</div>
+                <div class="read-more-btn">Читать далее</div>
               </a>
             </article>
             <?php endforeach; 
