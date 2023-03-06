@@ -64,7 +64,7 @@ $article = get_field('_article');
                 <?php include(TEMPLATEPATH . '/components/shared.php'); ?>
               </div>
               <div>
-                Актуальное
+                Актуальные заметки
                <?php 
                   $blockACF = get_field('notes');
                       $fieldsACF = $blockACF['fields'];

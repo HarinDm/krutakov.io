@@ -22,7 +22,7 @@ var sliderBannerBookmarks = document.querySelector('#sliderBannerBookmarks');
  
 if(sliderBannerBookmarks) {
    var SwiperSliderBannerBookmarks = new Swiper(sliderBannerBookmarks, {
-    slidesPerView: 7,
+    slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
     navigation: {
