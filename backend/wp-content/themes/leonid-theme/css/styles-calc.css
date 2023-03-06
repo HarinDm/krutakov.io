@@ -414,10 +414,12 @@
 
 .sidebar__shared {
   display: none;
+  margin-bottom: 60px;
 }
 
 .sidebar__next {
   display: none;
+  width: 279px;
 }
 
 .sidebar .shared__title {
@@ -1792,22 +1794,30 @@ z-index: 2;
   margin-top: 45px;
 }
 
-/* .tabs-nav__1024px{
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: none;
-  flex-wrap: wrap;
-  margin: 40px -15px 50px;
-} */
-
 .date__info-date,
 .date__info-category{
   font-size: 10px;
 }
 
+.sidebar
+.article-card{
+  width: 220px;
+  margin: 20px 0;
+}
 
+.article-card__text
+.read-more{
+  margin: 15px 0 60px;
+}
 
+.sidebar__items
+.article-card{
+  width: 279px;
+}
+
+.article-card__info{
+  margin-bottom: 10px;
+}
 
 
 

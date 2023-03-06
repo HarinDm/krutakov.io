@@ -64,38 +64,35 @@ $article = get_field('_article');
                 <?php include(TEMPLATEPATH . '/components/shared.php'); ?>
               </div>
               <div>
-                Актуальные заметки
-               <?php 
+                 Актуальные заметки
+                  <?php 
                   $blockACF = get_field('notes');
-                      $fieldsACF = $blockACF['fields'];
-                      
-                      $notes = $fieldsACF['articles'];
-                      $link = $fieldsACF['link'];
-                      $any = $fieldsACF['any'];
-                
-                foreach($notes as $post): 
-                    setup_postdata($post); 
-                ?>
-                  <article class="article-card ">
-                    <div class="article-card__info">
-                      <div class="date__info">
-                        <div class="date__info-date"> <?php echo get_the_date('j F Y'); ?></div>
-                        <div class="date__info-category">
-                          <?php
-                          $cats = wp_get_post_categories( $post->ID, [ 'fields' => 'all' ] );
-                          echo $catName = $cats[0]->name;
-                          ?>
-
+                  $fieldsACF = $blockACF['fields'];
+                  $notes = $fieldsACF['articles'];
+                  $link = $fieldsACF['link'];
+                  $any = $fieldsACF['any'];
+                    foreach($notes as $post): 
+                        setup_postdata($post); 
+                    ?>
+                    <article class="article-card-single">
+                      <div class="article-card__info">
+                        <div class="date__info">
+                          <div class="date__info-date"> <?php echo get_the_date('j F Y'); ?></div>
+                          <div class="date__info-category">
+                            <?php
+                            $cats = wp_get_post_categories( $post->ID, [ 'fields' => 'all' ] );
+                            echo $catName = $cats[0]->name;
+                            ?>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <a class="article-card__text" href="<?php the_permalink() ?>"><?php the_title() ?>
-                      <div class="read-more">Читать далее</div>
-                    </a>
-                  </article>
-              <?php endforeach; 
-              wp_reset_postdata();
-              ?>
+                      <a class="article-card__text" href="<?php the_permalink() ?>"><?php the_title() ?>
+                        <div class="read-more">Читать далее</div>
+                      </a>
+                    </article>
+                  <?php endforeach; 
+                  wp_reset_postdata();
+                  ?>
               </div>
               <div class="sidebar__next">
                 <div class="sidebar__title page_CAPTION page_red page_bold">Далее:</div>
