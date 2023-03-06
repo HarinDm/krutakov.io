@@ -1846,7 +1846,22 @@ z-index: 2;
   }
 }
 
+@media screen and (max-width: 767px) {
+  .slider-banner__btn{
+    display: none;
+  }
+
+  .read-all {
+    width: 100%;
+    height: 66px;
+    margin-top: 40px;
+    z-index: 2;
+    position: relative;
+  }
+}
+
 @media screen and (max-width: 320px) {
+
   .page__title-h1 {
     margin-bottom: 0px;
   }
